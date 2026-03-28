@@ -3,7 +3,6 @@
 
     double valor = 0.0;
     int numero = 0;
-    int opcao = 0;
     double soma = 0.0;
 
 
@@ -18,7 +17,7 @@
           printf("\n%s\n" , "Deseja depositar mais? (1- sim  2- nao) ");
           scanf ("%d" , &controlador);
         } while (controlador == 1);
-        
+
 
     }
 
@@ -40,7 +39,7 @@
 
 int main ()
 {
-
+    int opcao = 0;
 
     printf ("Qual o numero da conta? \n");
     scanf ("%d" , &numero);
@@ -52,6 +51,7 @@ int main ()
 
     do //menu
     {
+
         printf ("\n%s%d\n" , "Numero da conta: " , numero);
         printf ("\n%s%.2lf\n" , "Valor atual da conta : " , soma);
         printf ("\n0 - Terminar");
