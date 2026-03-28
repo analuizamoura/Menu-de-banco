@@ -7,11 +7,33 @@
     double soma = 0.0;
 
 
-    void dep (void)
+    void dep (void) //metodo para realizar o deposito
     {
-        printf ("\nQuanto quer depositar? \n");
-        scanf ("%lf" , &valor);
-        soma = valor + soma;
+        int controlador = 0;
+        do
+        {
+          printf ("\nQuanto quer depositar? \n");
+          scanf ("%lf" , &valor);
+          soma = valor + soma;
+          printf("\n%s\n" , "Deseja depositar mais? (1- sim  2- nao) ");
+          scanf ("%d" , &controlador);
+        } while (controlador == 1);
+        
+
+    }
+
+    void saque (void) //metodo para realizar o saque
+    {
+        int controlador = 0;
+        do
+        {
+          printf ("\nQuanto quer sacar? \n");
+          scanf("%lf" , &valor);
+          soma = soma - valor;
+          printf("\n%s\n" , "Deseja sacar mais? (1- sim  2- nao) ");
+          scanf ("%d" , &controlador);
+        }
+        while (controlador == 1);
     }
 
 
@@ -28,19 +50,23 @@ int main ()
 
 
 
-    do
+    do //menu
     {
         printf ("\n%s%d\n" , "Numero da conta: " , numero);
         printf ("\n%s%.2lf\n" , "Valor atual da conta : " , soma);
-        printf("\n1 - Deposito\n");
-        printf ("Qual opcao? ");
+        printf ("\n0 - Terminar");
+        printf("\n1 - Deposito");
+        printf ("\n2 - Saque");
+        printf ("\nQual opcao? ");
         scanf("%d" , &opcao);
         getchar();
 
 
       switch (opcao)
       {
+        case 0 : break;
         case 1 : dep(); break;
+        case 2 : saque(); break;
         default:
             printf ( "\nERRO: Opcao invalida.\n" );
             break;
@@ -48,8 +74,10 @@ int main ()
     }
     while( opcao != 0 );
 
+    printf ("Aperte ENTER para encerrar");
+    getchar();
+
 
     return 0;
-
 
 }
