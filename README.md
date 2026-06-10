@@ -19,4 +19,4 @@ Pretendo evoluir este projeto no futuro adicionando os seguintes recursos:
 * **Histórico de Transações:** Criar um arquivo separado (um extrato) para listar todas as operações de saque e depósito realizadas pelo usuário.
 * **Sistema de Múltiplas Contas:** Permitir que o programa mude de conta e gerencie mais de um perfil.
 * **Transferências entre Contas:** Adicionar uma nova opção no menu para transferir um valor de saldo diretamente de uma conta para outra.
-* **Migração para C++:** Reescrever a lógica do sistema utilizando Programação Orientada a Objetos (POO), organizando os dados da conta dentro de classes.
+
